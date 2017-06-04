@@ -386,6 +386,6 @@ module ActiveAdmin
         end
       end # IndexTableFor
 
-    end # IndexAsTable
+    end
   end
 end
