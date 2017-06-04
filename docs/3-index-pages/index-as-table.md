@@ -84,8 +84,6 @@ index do
   column :title
   actions defaults: false do |post|
     item "View", admin_post_path(post)
-    item "Edit", edit_admin_post_path(post)
-    item "Delete", admin_post_path(post), method: :delete
   end
 end
 ```
@@ -162,7 +160,7 @@ index do
 end
 ```
 
-## Custom sorting 
+## Custom sorting
 
 It is also possible to use database specific expressions and options for sorting by column
 
@@ -202,7 +200,6 @@ index do
   column :publisher, sortable: 'publishers.name'
 end
 ```
-
 
 ## Showing and Hiding Columns
 
