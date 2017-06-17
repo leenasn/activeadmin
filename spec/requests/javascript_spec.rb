@@ -19,4 +19,3 @@ RSpec.describe 'Javascript', type: :request, if: java_installed do
     lint.run
   end
 end
-
