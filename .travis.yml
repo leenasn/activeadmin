@@ -11,6 +11,7 @@ bundler_args: --without development
 branches:
   only:
     - master
+    - jruby_tracking
 
 cache: bundler
 
