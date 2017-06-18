@@ -169,3 +169,9 @@ rake "db:drop db:create db:migrate", env: 'test'
 if ENV['INSTALL_PARALLEL']
   inject_into_file 'config/database.yml', "<%= ENV['TEST_ENV_NUMBER'] %>", after: 'test.sqlite3'
 end
+
+if RUBY_PLATFORM == "java"
+  gsub_file 'config/initializers/session_store.rb',
+            /^.*session_store :cookie_store.*$/,
+            "Rails.application.config.session_store :cache_store"
+end
